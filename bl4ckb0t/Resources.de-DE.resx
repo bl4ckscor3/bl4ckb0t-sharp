@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="changelog_notFound" xml:space="preserve">
+    <value>Diese Version konnte nicht gefunden werden.</value>
+  </data>
+  <data name="changelog_syntax" xml:space="preserve">
+    <value>%cmd%changelog [version]</value>
+  </data>
+  <data name="changelog_usage1" xml:space="preserve">
+    <value>%cmd%changelog || Zeigt den Changelog der aktuellsten Version</value>
+  </data>
+  <data name="changelog_usage2" xml:space="preserve">
+    <value>%cmd%changelog &lt;version&gt; || Zeigt den Changelog der angegebenen Version</value>
+  </data>
+  <data name="help_aliases" xml:space="preserve">
+    <value>&amp;k&amp;f(Aliasse: </value>
+  </data>
+  <data name="help_channelCommands" xml:space="preserve">
+    <value>Channel Kommandos:</value>
+  </data>
+  <data name="help_credits1" xml:space="preserve">
+    <value>&amp;aGemacht von bl4ckscor3</value>
+  </data>
+  <data name="help_credits2" xml:space="preserve">
+    <value>&amp;aDanke Stackoverflow - Es hat mir mehrere Male den Arsch gerettet</value>
+  </data>
+  <data name="help_credits3" xml:space="preserve">
+    <value>&amp;aKompiliert in .NET 4.5 mit ChatSharp (https://github.com/SirCmpwn/ChatSharp)</value>
+  </data>
+  <data name="help_credits4" xml:space="preserve">
+    <value>&amp;aVorschläge sind herzlichst willkommen! Bitte erstelle eine Karte auf dem Trello Board wenn du einen hast :) (-trello)</value>
+  </data>
+  <data name="help_creditsHeader" xml:space="preserve">
+    <value>&amp;h&amp;7----------Credits----------</value>
+  </data>
+  <data name="help_genericHelpHeader" xml:space="preserve">
+    <value>&amp;h&amp;7----------Installierte Module----------</value>
+  </data>
+  <data name="help_moduleHelpHeader" xml:space="preserve">
+    <value>&amp;h&amp;7----------Hilfe für: {0}----------</value>
+  </data>
+  <data name="help_moreInfo" xml:space="preserve">
+    <value>Schreibe -help &lt;module&gt; um spezifische Hilfe für das angegebene Modul zu bekommen</value>
+  </data>
+  <data name="help_none" xml:space="preserve">
+    <value>Keine</value>
+  </data>
+  <data name="help_noPermission" xml:space="preserve">
+    <value>Kein Zugriff</value>
+  </data>
+  <data name="help_notesHeader" xml:space="preserve">
+    <value>Bemerkungen:</value>
+  </data>
+  <data name="help_privateCommands" xml:space="preserve">
+    <value>Private Kommandos:</value>
+  </data>
+  <data name="help_syntax" xml:space="preserve">
+    <value>%cmd%help &lt;modulname&gt;</value>
+  </data>
+  <data name="help_usage1" xml:space="preserve">
+    <value>%cmd%help || Zeig alle Module und die Credits</value>
+  </data>
+  <data name="help_usage2" xml:space="preserve">
+    <value>%cmd%help &lt;modulname&gt; || Zeigt Hilfe für das angegebene Modul (der Name kann in -help abgelesen werden)</value>
+  </data>
+  <data name="help_usageHeader" xml:space="preserve">
+    <value>Nutzungsweise:</value>
+  </data>
+  <data name="info_author" xml:space="preserve">
+    <value>Autor:&amp;g bl4ckscor3</value>
+  </data>
+  <data name="info_buildDate" xml:space="preserve">
+    <value>Build-Datum:&amp;g {0}</value>
+  </data>
+  <data name="info_dotNetVersion" xml:space="preserve">
+    <value>.NET Version:&amp;g {0}</value>
+  </data>
+  <data name="info_syntax" xml:space="preserve">
+    <value>%cmd%info</value>
+  </data>
+  <data name="info_uptime" xml:space="preserve">
+    <value>Laufzeit:&amp;g {0}</value>
+  </data>
+  <data name="info_usage" xml:space="preserve">
+    <value>Shows information about the bot</value>
+  </data>
+  <data name="info_version" xml:space="preserve">
+    <value>Version:&amp;g {0}</value>
+  </data>
+  <data name="moduleManagement_alreadyDisabled" xml:space="preserve">
+    <value>Dieses Module ist schon deaktiviert.</value>
+  </data>
+  <data name="moduleManagement_alreadyEnabled" xml:space="preserve">
+    <value>Dieses Modul ist schon aktiviert.</value>
+  </data>
+  <data name="moduleManagement_disabled" xml:space="preserve">
+    <value>Das Modul wurde erfolgreich deaktiviert.</value>
+  </data>
+  <data name="moduleManagement_enabled" xml:space="preserve">
+    <value>Das Modul wurde erfolgreich aktiviert.</value>
+  </data>
+  <data name="moduleManagement_errorDownloading" xml:space="preserve">
+    <value>Während dem Download des Moduls ist ein Fehler aufgetreten. Siehe Log für Details.</value>
+  </data>
+  <data name="moduleManagement_errorEnabling" xml:space="preserve">
+    <value>Das Modul wurde wegen eines Fehlers nicht aktiviert. Siehe Log für Details.</value>
+  </data>
+  <data name="moduleManagement_errorLoading" xml:space="preserve">
+    <value>Es ist ein Fehler aufgetreten. Siehe Log für Details.</value>
+  </data>
+  <data name="moduleManagement_loaded" xml:space="preserve">
+    <value>Das Modul wurde erfolgreich geladen.</value>
+  </data>
+  <data name="moduleManagement_private" xml:space="preserve">
+    <value>Dieses Modul ist ein privates Modul oder existiert nicht.</value>
+  </data>
+  <data name="moduleManagement_problemDisabling" xml:space="preserve">
+    <value>Während des Deaktivierens ist ein Problem aufgetreten. Siehe Log für Details.</value>
+  </data>
+  <data name="moduleManagement_problemEnabling" xml:space="preserve">
+    <value>Während des Aktivierens ist ein Problem aufgetreten. Siehe Log für Details.</value>
+  </data>
+  <data name="moduleManagement_problemRemoving" xml:space="preserve">
+    <value>Während des Entfernens ist ein Problem aufgetreten. Siehe Log für Details.</value>
+  </data>
+  <data name="moduleManagement_removed" xml:space="preserve">
+    <value>Das Modul wurde erfolgreich entfernt.</value>
+  </data>
+  <data name="moduleManagement_syntax" xml:space="preserve">
+    <value>%cmd%module &lt;enable|disable|remove|delete|reload|load&gt; &lt;modulname|direkterDownloadLink&gt;</value>
+  </data>
+  <data name="moduleManagement_usage1" xml:space="preserve">
+    <value>%cmd%module enable &lt;modulname&gt; || Aktiviert das angegebene Modul, sofern es im modules Ordner ist</value>
+  </data>
+  <data name="moduleManagement_usage2" xml:space="preserve">
+    <value>%cmd%module disable &lt;modulname&gt; || Deaktiviert das angegebene Modul, sofern es im modules Ordner ist</value>
+  </data>
+  <data name="moduleManagement_usage3" xml:space="preserve">
+    <value>%cmd%module &lt;remove|delete&gt; &lt;modulname&gt;|| Löscht ein Modul vom Modulordner</value>
+  </data>
+  <data name="moduleManagement_usage4" xml:space="preserve">
+    <value>%cmd%module reload &lt;modulname&gt; || Lädt ein Modul neu (deaktiviert und aktiviert es wieder)</value>
+  </data>
+  <data name="moduleManagement_usage5" xml:space="preserve">
+    <value>%cmd%module load &lt;direkterDownloadLink&gt; || Lädt das Modul vom angegebenen Link herunter und aktiviert es</value>
+  </data>
+  <data name="notAuthorized" xml:space="preserve">
+    <value>Sorry, {0}, Du hast nicht die Berechtigung dazu.</value>
+  </data>
+  <data name="shutdown_syntax_restart" xml:space="preserve">
+    <value>%cmd%restart</value>
+  </data>
+  <data name="shutdown_syntax_stop" xml:space="preserve">
+    <value>%cmd%stop</value>
+  </data>
+  <data name="shutdown_usage1" xml:space="preserve">
+    <value>%cmd%stop || Stoppt den Bot ohne ihn neu zu starten</value>
+  </data>
+  <data name="shutdown_usage2" xml:space="preserve">
+    <value>%cmd%restart || Startet den Bot neu</value>
+  </data>
+  <data name="source_syntax" xml:space="preserve">
+    <value>%cmd%source</value>
+  </data>
+  <data name="source_usage" xml:space="preserve">
+    <value>Gibt Dir den Link zu dem Quellcode des Bots</value>
+  </data>
+  <data name="trello_syntax" xml:space="preserve">
+    <value>%cmd%trello</value>
+  </data>
+  <data name="trello_usage" xml:space="preserve">
+    <value>Zeigt den Link des Trello Boards vom Bot an</value>
+  </data>
+  <data name="update_success" xml:space="preserve">
+    <value>Die Listen wurden erfolgreich geupdated.</value>
+  </data>
+  <data name="update_syntax" xml:space="preserve">
+    <value>%cmd%update</value>
+  </data>
+  <data name="update_usage" xml:space="preserve">
+    <value>Updated alle Listen (Changelog, Permissions, channels etc.)</value>
+  </data>
+</root>

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9387C496-D52C-4A85-B6AE-CA4292836472}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>bl4ckb0t</RootNamespace>
+    <AssemblyName>bl4ckb0t</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\PushBulletSharp.3.0.1\lib\portable-windows8+net45\BouncyCastle.dll</HintPath>
+    </Reference>
+    <Reference Include="Coypu, Version=2.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Coypu.2.10.0\lib\net40\Coypu.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NSoup, Version=0.8.0.0, Culture=neutral, PublicKeyToken=6d44e53f0a65e802, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NSoup.dll</HintPath>
+    </Reference>
+    <Reference Include="PushbulletSharp, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PushBulletSharp.3.0.1\lib\portable-windows8+net45\PushbulletSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.48.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.48.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.48.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.2.48.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core.cs" />
+    <Compile Include="Listener.cs" />
+    <Compile Include="Modules\Changelog.cs" />
+    <Compile Include="Modules\Commands\ChangelogCommand.cs" />
+    <Compile Include="Modules\Help.cs" />
+    <Compile Include="Modules\Commands\HelpChannelCommand.cs" />
+    <Compile Include="Modules\Commands\HelpPrivateCommand.cs" />
+    <Compile Include="Modules\Info.cs" />
+    <Compile Include="Modules\Commands\InfoCommand.cs" />
+    <Compile Include="Modules\ModuleManagement.cs" />
+    <Compile Include="Modules\Commands\ModuleManagementCommand.cs" />
+    <Compile Include="Modules\Commands\RestartCommand.cs" />
+    <Compile Include="Modules\Shutdown.cs" />
+    <Compile Include="Modules\Source.cs" />
+    <Compile Include="Modules\Commands\SourceCommand.cs" />
+    <Compile Include="Modules\Commands\StopCommand.cs" />
+    <Compile Include="Modules\Trello.cs" />
+    <Compile Include="Modules\Commands\TrelloCommand.cs" />
+    <Compile Include="Modules\Update.cs" />
+    <Compile Include="Modules\Commands\UpdateCommand.cs" />
+    <Compile Include="Passwords.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.de-DE.resx" />
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Action\bl4ckb0t.Modules.Action.csproj">
+      <Project>{fbe2abab-28df-4a80-84cd-dc330383279a}</Project>
+      <Name>bl4ckb0t.Modules.Action</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.BotInfoData\bl4ckb0t.BotInfoData.csproj">
+      <Project>{bad5c38d-8e59-4b5e-a811-7e2d1620d762}</Project>
+      <Name>bl4ckb0t.BotInfoData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.ChangeNick\bl4ckb0t.Modules.ChangeNick.csproj">
+      <Project>{2eadb219-cb14-42ad-afe5-7d98a456d99b}</Project>
+      <Name>bl4ckb0t.Modules.ChangeNick</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChatSharp\ChatSharp.csproj">
+      <Project>{e5b58f5c-31ee-4dc3-bca5-357dbca07da8}</Project>
+      <Name>bl4ckb0t.Modules.ChatSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.CookieRewards\bl4ckb0t.Modules.CookieRewards.csproj">
+      <Project>{9a1f87fc-946f-4748-9c38-4d487c8755d8}</Project>
+      <Name>bl4ckb0t.Modules.CookieRewards</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.CSGONotification\bl4ckb0t.Modules.CSGONotification.csproj">
+      <Project>{588c7a78-4a22-4a50-8ea6-9e294a44aaee}</Project>
+      <Name>bl4ckb0t.Modules.CSGONotification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Decide\bl4ckb0t.Modules.Decide.csproj">
+      <Project>{70cf31c4-6a28-4851-b079-ad089d3aa862}</Project>
+      <Name>bl4ckb0t.Modules.Decide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Distance\bl4ckb0t.Modules.Distance.csproj">
+      <Project>{e79a30fd-97b0-4fa8-9f2b-2488a4b79746}</Project>
+      <Name>bl4ckb0t.Modules.Distance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Evaluate\bl4ckb0t.Modules.Evaluate.csproj">
+      <Project>{d2d85f9a-21dd-4a26-b25c-a72f170953ec}</Project>
+      <Name>bl4ckb0t.Modules.Evaluate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Forge\bl4ckb0t.Modules.Forge.csproj">
+      <Project>{740ac470-4bc2-4560-b8b6-36f501a4fb10}</Project>
+      <Name>bl4ckb0t.Modules.Forge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.GitHubInfo\bl4ckb0t.Modules.GitHubInfo.csproj">
+      <Project>{92a8f399-fd97-4648-a911-bea3569c4884}</Project>
+      <Name>bl4ckb0t.Modules.GitHubInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Identify\bl4ckb0t.Modules.Identify.csproj">
+      <Project>{a96523e7-1690-4465-9ed4-f516c7c220d6}</Project>
+      <Name>bl4ckb0t.Modules.Identify</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.IPLocation\bl4ckb0t.Modules.IPLocation.csproj">
+      <Project>{1447cc33-c43d-4701-849f-3e6095bb8f9f}</Project>
+      <Name>bl4ckb0t.Modules.IPLocation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Join\bl4ckb0t.Modules.Join.csproj">
+      <Project>{f6689afb-0861-4f81-8e9f-19faaf0208f0}</Project>
+      <Name>bl4ckb0t.Modules.Join</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Kick\bl4ckb0t.Modules.Kick.csproj">
+      <Project>{da6316f1-750e-4477-aa3f-959631731071}</Project>
+      <Name>bl4ckb0t.Modules.Kick</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Leave\bl4ckb0t.Modules.Leave.csproj">
+      <Project>{736b4e39-0a25-40d2-a4f2-451f31c7fdb0}</Project>
+      <Name>bl4ckb0t.Modules.Leave</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Leet\bl4ckb0t.Modules.Leet.csproj">
+      <Project>{f6b3cfe0-fe24-4e72-9a18-2a4493ba124d}</Project>
+      <Name>bl4ckb0t.Modules.Leet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.LinkTitle\bl4ckb0t.Modules.LinkTitle.csproj">
+      <Project>{9dee1f2c-0bc9-44cf-a463-03cecf02b2d4}</Project>
+      <Name>bl4ckb0t.Modules.LinkTitle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.ListChans\bl4ckb0t.Modules.ListChans.csproj">
+      <Project>{09d88185-a546-4fe6-9234-0a6d99f4e413}</Project>
+      <Name>bl4ckb0t.Modules.ListChans</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.ModuleAPI\bl4ckb0t.ModuleAPI.csproj">
+      <Project>{18205fe9-9fc5-4932-a865-bb435d6bb51e}</Project>
+      <Name>bl4ckb0t.ModuleAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Ping\bl4ckb0t.Modules.Ping.csproj">
+      <Project>{0c835f00-8e68-427e-ac8b-58c8ff6fe05b}</Project>
+      <Name>bl4ckb0t.Modules.Ping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Reddit\bl4ckb0t.Modules.Reddit.csproj">
+      <Project>{ff47573c-5af3-4e7d-a4b2-eecab626e1bc}</Project>
+      <Name>bl4ckb0t.Modules.Reddit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Remind\bl4ckb0t.Modules.Remind.csproj">
+      <Project>{33419843-73b4-424f-aff4-02d1f0a40bb3}</Project>
+      <Name>bl4ckb0t.Modules.Remind</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Select\bl4ckb0t.Modules.Select.csproj">
+      <Project>{4acb82a1-f675-4f5c-9054-33ffe6cf52da}</Project>
+      <Name>bl4ckb0t.Modules.Select</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.SendMessage\bl4ckb0t.Modules.SendMessage.csproj">
+      <Project>{d072e745-561b-459f-ae22-363de351dc10}</Project>
+      <Name>bl4ckb0t.Modules.SendMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.ShowTweet\bl4ckb0t.Modules.ShowTweet.csproj">
+      <Project>{b2b80272-7688-4251-b3c1-206964be9722}</Project>
+      <Name>bl4ckb0t.Modules.ShowTweet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Socials\bl4ckb0t.Modules.Socials.csproj">
+      <Project>{bb0177a0-2403-42ec-8a93-1a7cd8498f35}</Project>
+      <Name>bl4ckb0t.Modules.Socials</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.SpellingCorrection\bl4ckb0t.Modules.SpellingCorrection.csproj">
+      <Project>{a67e52cd-ce37-4756-a024-75a6227d0cc9}</Project>
+      <Name>bl4ckb0t.Modules.SpellingCorrection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Thumbnail\bl4ckb0t.Modules.Thumbnail.csproj">
+      <Project>{f69b4584-d75a-4a96-999f-a9cb66db5706}</Project>
+      <Name>bl4ckb0t.Modules.Thumbnail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Unshorten\bl4ckb0t.Modules.Unshorten.csproj">
+      <Project>{4f8c056e-0a48-4d8d-b34d-3aedcd3afde7}</Project>
+      <Name>bl4ckb0t.Modules.Unshorten</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Util\bl4ckb0t.Util.csproj">
+      <Project>{d98b5a24-7825-4edf-8427-42cefe4da32e}</Project>
+      <Name>bl4ckb0t.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.Weather\bl4ckb0t.Modules.Weather.csproj">
+      <Project>{0f528fe7-c29d-4ec1-bf32-1117b3366cf6}</Project>
+      <Name>bl4ckb0t.Modules.Weather</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bl4ckb0t.Modules.YouTubeInfo\bl4ckb0t.Modules.YouTubeInfo.csproj">
+      <Project>{048b7171-03e9-4028-9933-5c52c1e026ed}</Project>
+      <Name>bl4ckb0t.Modules.YouTubeInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\PhantomJS.1.9.2\tools\phantomjs\phantomjs.exe">
+      <Link>phantomjs.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="phantomjs-license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>del *.pdb
+del *.txt
+del *.xml
+mkdir "data/modules"
+
+move Action.dll data/modules/Action.dll
+move AFKEssen.dll data/modules/AFKEssen.dll
+move ChangeNick.dll data/modules/ChangeNick.dll
+move CSGONotification.dll data/modules/CSGONotification.dll
+move CookieRewards.dll data/modules/CookieRewards.dll
+move Decide.dll data/modules/Decide.dll
+move Distance.dll data/modules/Distance.dll
+move Evaluate.dll data/modules/Evaluate.dll
+move Forge.dll data/modules/Forge.dll
+echo "move GitHubInfo.dll data/modules/GitHubInfo.dll"
+move Identify.dll data/modules/Identify.dll
+move IPLocation.dll data/modules/IPLocation.dll
+move Join.dll data/modules/Join.dll
+move Kick.dll data/modules/Kick.dll
+move Leave.dll data/modules/Leave.dll
+move Leet.dll data/modules/Leet.dll
+move LinkTitle.dll data/modules/LinkTitle.dll
+move ListChans.dll data/modules/ListChans.dll
+move Ping.dll data/modules/Ping.dll
+move Reddit.dll data/modules/Reddit.dll
+move Remind.dll data/modules/Remind.dll
+move Select.dll data/modules/Select.dll
+move SendMessage.dll data/modules/SendMessage.dll
+move ShowTweet.dll data/modules/ShowTweet.dll
+move Shrugs.dll data/modules/Shrugs.dll
+move Socials.dll data/modules/Socials.dll
+move SpellingCorrection.dll data/modules/SpellingCorrection.dll
+move Thumbnail.dll data/modules/Thumbnail.dll
+move Unshorten.dll data/modules/Unshorten.dll
+move Weather.dll data/modules/Weather.dll
+move WelcomeBack.dll data/modules/WelcomeBack.dll
+move YouTubeInfo.dll data/modules/YouTubeInfo.dll</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>lobal-xü</PreBuildEvent>
+  </PropertyGroup>
+</Project>
