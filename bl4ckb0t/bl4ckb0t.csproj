@@ -90,7 +90,6 @@
     <Compile Include="Modules\Commands\TrelloCommand.cs" />
     <Compile Include="Modules\Update.cs" />
     <Compile Include="Modules\Commands\UpdateCommand.cs" />
-    <Compile Include="Passwords.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -294,6 +293,7 @@ move WelcomeBack.dll data/modules/WelcomeBack.dll
 move YouTubeInfo.dll data/modules/YouTubeInfo.dll</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>lobal-xü</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>

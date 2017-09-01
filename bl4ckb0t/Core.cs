@@ -81,13 +81,7 @@ namespace bl4ckb0t
 			Utilities.AddInformation("client", client);
 			client.ConnectAsync();
 
-			quitCycle:
-			{
-				string input = Console.ReadLine();
-
-				if(!(Utilities.EqualsIgnoreCase(input, "quit") || Utilities.EqualsIgnoreCase(input, "exit")))
-					goto quitCycle;
-			}
+			while(true){;}
 		}
 	}
 }
