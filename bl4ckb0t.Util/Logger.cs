@@ -16,59 +16,36 @@ namespace bl4ckb0t.Logging
 		/// </summary>
 		public static void Setup()
 		{
-			Console.WriteLine(1);
 			string botname = Utilities.Name();
-			Console.WriteLine(2);
 			string logfolder = Path.Combine(Utilities.DataPath(), "logs");
-			Console.WriteLine(3);
 			string x = Path.Combine(logfolder, $"{botname}.log");
-			Console.WriteLine(3.1);
 			Uri uri = new Uri(x);
-			Console.WriteLine(3.2);
 			string logfile = uri.LocalPath;
-			Console.WriteLine(4);
 
 			Directory.CreateDirectory(new Uri(logfolder).LocalPath);
-			Console.WriteLine(5);
 
 			if(!File.Exists(logfile))
 			{
-				Console.WriteLine(6);
 				buffer.Add($"\"{botname}.log\" does not exist, creating new file");
-				Console.WriteLine(7);
 				File.Create(logfile).Close();
-				Console.WriteLine(8);
 				buffer.Add("File succesfully created");
-				Console.WriteLine(9);
 			}
 			else
 			{
 				FileStream orig = File.OpenRead(logfile);
-				Console.WriteLine(10);
 				FileStream copy = File.Create(new Uri(Path.Combine(logfolder, $"{DateTime.Now.ToString().Replace(':', '-')}.log")).LocalPath);
-				Console.WriteLine(11);
 
 				buffer.Add($"Created new file to copy old logs to: \"{copy.Name}\"");
-				Console.WriteLine(12);
 				buffer.Add("Starting copy process");
-				Console.WriteLine(13);
 				orig.CopyTo(copy);
-				Console.WriteLine(14);
 				buffer.Add("Successfully copied old logging file");
-				Console.WriteLine(15);
 				copy.Close();
-				Console.WriteLine(16);
 				orig.Close();
-				Console.WriteLine(17);
 			}
 
-			Console.WriteLine(18);
 			Utilities.ClearFile(logfile);
-			Console.WriteLine(19);
 			writer = new StreamWriter(File.OpenWrite(logfile));
-			Console.WriteLine(20);
 			Enable();
-			Console.WriteLine(21);
 		}
 
 		/// <summary>

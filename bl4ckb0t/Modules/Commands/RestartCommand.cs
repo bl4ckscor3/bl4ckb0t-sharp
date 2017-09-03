@@ -16,7 +16,7 @@ namespace bl4ckb0t.Modules
 				Lists.ClearLists();
 				ModuleHandler.modules.Clear();
 				Logger.Info("Creating new bot");
-				Core.CreateBot(Utilities.Wip());
+				Core.CreateBot();
 				return true;
 			}
 			else

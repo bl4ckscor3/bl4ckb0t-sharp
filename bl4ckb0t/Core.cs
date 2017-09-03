@@ -10,11 +10,6 @@ namespace bl4ckb0t
 {
 	class Core
 	{
-		/// <summary>
-		/// Wether this bot has been started as a wip version or not
-		/// </summary>
-		internal static bool wip;
-
 		static void Main(string[] args)
 		{
 			Utilities.AddInformation("name", "bl4ckb0t");
@@ -28,7 +23,7 @@ namespace bl4ckb0t
 
 			try
 			{
-				wip = args.Contains("-wip");
+				bool wip = args.Contains("-wip");
 				Utilities.AddInformation("wip", wip);
 
 				if(wip)
@@ -36,7 +31,7 @@ namespace bl4ckb0t
 
 				Logger.Setup();
 				Logger.Info("Setting up bot" + (wip ? " as WIP version" : ""));
-				CreateBot(wip);
+				CreateBot();
 			}
 			catch(Exception e)
 			{
@@ -49,7 +44,7 @@ namespace bl4ckb0t
 		/// Creates the bot and starts it
 		/// </summary>
 		/// <param name="wip">true if the bot was started with the -wip parameter, false otherwise</param>
-		public static void CreateBot(bool wip)
+		public static void CreateBot()
 		{
 			Bot client = new Bot("irc.esper.net:6697", new IrcUser(Utilities.Name(), Utilities.Name()), true);
 

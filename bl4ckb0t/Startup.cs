@@ -94,7 +94,7 @@ namespace bl4ckb0t
 
 		private static void FetchDefaultChannels()
 		{
-			if(Core.wip)
+			if(Utilities.Wip())
 			{
 				Lists.AddDefaultChannel("#bl4ckb0tTest");
 				((Dictionary<string, string>)Utilities.GetInformation("langs"))["#bl4ckb0tTest"] = "en-US";
