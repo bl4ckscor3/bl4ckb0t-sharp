@@ -43,14 +43,11 @@ namespace bl4ckb0t
 		/// <summary>
 		/// Creates the bot and starts it
 		/// </summary>
-		/// <param name="wip">true if the bot was started with the -wip parameter, false otherwise</param>
 		public static void CreateBot()
 		{
 			Bot client = new Bot("irc.esper.net:6697", new IrcUser(Utilities.Name(), Utilities.Name()), true);
 
-			Logger.Info("Created client");
-			Logger.Info("Setting default culture");
-			Startup.SetCulture();
+			Logger.Info("Created client");			
 			Logger.Info("Fetching external information");
 			Startup.Fetch();
 			Logger.Info("Done fetching external information");
@@ -73,7 +70,6 @@ namespace bl4ckb0t
 			Logger.Info("All modules loaded");
 			Utilities.AddInformation("client", client);
 			Logger.Info("Starting bot");
-			Utilities.AddInformation("client", client);
 			client.ConnectAsync();
 
 			while(true){;}

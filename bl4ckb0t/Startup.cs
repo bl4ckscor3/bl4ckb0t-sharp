@@ -7,33 +7,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Globalization;
-using System.Reflection;
 
 namespace bl4ckb0t
 {
 	public class Startup
 	{
-		/// <summary>
-		/// Sets the default culture. Only ever use this once
-		/// </summary>
-		public static void SetCulture()
-		{
-			Type type = typeof(CultureInfo);
-			CultureInfo culture = CultureInfo.CreateSpecificCulture("en-US");
-
-			type.InvokeMember("s_userDefaultCulture",
-								BindingFlags.SetField | BindingFlags.NonPublic | BindingFlags.Static,
-								null,
-								culture,
-								new object[] { culture });
-			type.InvokeMember("s_userDefaultUICulture",
-								BindingFlags.SetField | BindingFlags.NonPublic | BindingFlags.Static,
-								null,
-								culture,
-								new object[] { culture });
-		}
-
 		/// <summary>
 		/// Fetches all external information the bot uses to function, such as permission levels and default channels
 		/// </summary>
