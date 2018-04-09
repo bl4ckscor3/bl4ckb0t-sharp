@@ -17,11 +17,11 @@ namespace bl4ckb0t.Util
 		/// <summary>
 		/// Adds information about the bot to the global database
 		/// </summary>
-		/// <param name="key">The key of the information by which it can be found</param>
+		/// <param name="key">The key of the information by which it can be found. Will be saved in lower case</param>
 		/// <param name="value">The information itself</param>
 		public static void AddInformation(string key, object value)
 		{
-			Data.information[key] = value;
+			Data.information[key.ToLower()] = value;
 		}
 
 		/// <summary>
@@ -45,11 +45,11 @@ namespace bl4ckb0t.Util
 		/// <summary>
 		/// Gets information about the bot from the global database as an object. You need to cast yourself
 		/// </summary>
-		/// <param name="key">They key of the information to get</param>
+		/// <param name="key">They key of the information to get. Will be converted to lower case</param>
 		/// <returns>The information</returns>
 		public static object GetInformation(string key)
 		{
-			return Data.information[key];
+			return Data.information[key.ToLower()];
 		}
 
 		/// <summary>
