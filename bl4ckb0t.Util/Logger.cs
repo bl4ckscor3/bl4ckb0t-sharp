@@ -53,11 +53,8 @@ namespace bl4ckb0t.Logging
 		/// </summary>
 		public static void Enable()
 		{
-			Console.WriteLine(1.1);
 			enabled = true;
-			Console.WriteLine(1.2);
 			Start();
-			Console.WriteLine(1.3);
 		}
 
 		/// <summary>
