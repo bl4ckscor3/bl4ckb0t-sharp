@@ -26,11 +26,11 @@ namespace bl4ckb0t.ModuleAPI
 		/// <param name="client">The IrcClient to be passed to the module</param>
 		public static void LoadModule(string file, Bot client)
 		{
-			if(!(@"file:\" + file).StartsWith(Path.Combine(Utilities.DataPath(), "modules")))
+			if(!file.StartsWith(Path.Combine(Utilities.DataPath(), "modules").Replace("file:", "")))
 				return;
 
 			IEnumerator<BaseModule> enumerator = Assembly.LoadFrom(file).GetTypes().Where(t => t.IsSubclassOf(typeof(BaseModule))).Select(type => {
-				return (BaseModule) Activator.CreateInstance(type, new string[]{file.Substring(file.LastIndexOf(@"\") + 1).Replace(".dll", "")}); //pass the name of the dll as the module name
+				return (BaseModule)Activator.CreateInstance(type, new string[] { file.Substring(file.LastIndexOf(Path.PathSeparator) + 1).Replace(".dll", "") }); //pass the name of the dll as the module name
 			}).GetEnumerator();
 			BaseModule module;
 

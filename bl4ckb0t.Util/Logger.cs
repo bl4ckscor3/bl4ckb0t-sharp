@@ -19,10 +19,10 @@ namespace bl4ckb0t.Logging
 			string botname = Utilities.Name();
 			string logfolder = Path.Combine(Utilities.DataPath(), "logs");
 			string x = Path.Combine(logfolder, $"{botname}.log");
-			Uri uri = new Uri(x);
+			NoPrefixUri uri = new NoPrefixUri(x);
 			string logfile = uri.LocalPath;
 
-			Directory.CreateDirectory(new Uri(logfolder).LocalPath);
+			Directory.CreateDirectory(new NoPrefixUri(logfolder).LocalPath);
 
 			if(!File.Exists(logfile))
 			{
@@ -33,7 +33,7 @@ namespace bl4ckb0t.Logging
 			else
 			{
 				FileStream orig = File.OpenRead(logfile);
-				FileStream copy = File.Create(new Uri(Path.Combine(logfolder, $"{DateTime.Now.ToString().Replace(':', '-')}.log")).LocalPath);
+				FileStream copy = File.Create(new NoPrefixUri(Path.Combine(logfolder, $"{DateTime.Now.ToString().Replace(':', '-')}.log")).LocalPath);
 
 				buffer.Add($"Created new file to copy old logs to: \"{copy.Name}\"");
 				buffer.Add("Starting copy process");

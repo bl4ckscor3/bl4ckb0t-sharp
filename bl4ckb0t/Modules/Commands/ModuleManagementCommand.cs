@@ -16,7 +16,7 @@ namespace bl4ckb0t.Modules
 
 			if(args.Length == 2)
 			{
-				string folder = new Uri(Path.Combine(Utilities.DataPath(), "modules")).LocalPath;
+				string folder = new NoPrefixUri(Path.Combine(Utilities.DataPath(), "modules")).LocalPath;
 
 				switch(args[0])
 				{
@@ -140,7 +140,7 @@ namespace bl4ckb0t.Modules
 						return true;
 					case "load":
 						string dlFileName = Path.GetFileName(args[1].Contains("?") ? args[1].Substring(0, args[1].IndexOf('?')) : args[1]);
-						string path = new Uri(Path.Combine(Utilities.DataPath(), "modules", dlFileName)).LocalPath;
+						string path = new NoPrefixUri(Path.Combine(Utilities.DataPath(), "modules", dlFileName)).LocalPath;
 
 						try
 						{

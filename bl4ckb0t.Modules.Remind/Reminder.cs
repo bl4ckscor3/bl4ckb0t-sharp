@@ -32,7 +32,7 @@ namespace bl4ckb0t.Modules.Remind
 			user = _user;
 			remindOf = _remindOf;
 			channel = _channel;
-			path = new Uri(Path.Combine(Remind.path, $"{id}.txt")).LocalPath;
+			path = new NoPrefixUri(Path.Combine(Remind.path, $"{id}.txt")).LocalPath;
 			Write();
 			reminders.Add(this);
 		}

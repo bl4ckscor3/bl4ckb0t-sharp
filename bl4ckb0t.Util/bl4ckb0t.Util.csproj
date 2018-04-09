@@ -53,6 +53,7 @@
     <Compile Include="Bot.cs" />
     <Compile Include="Colors.cs" />
     <Compile Include="Passwords.cs" />
+    <Compile Include="NoPrefixUri.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="WebWrapper.cs" />
   </ItemGroup>

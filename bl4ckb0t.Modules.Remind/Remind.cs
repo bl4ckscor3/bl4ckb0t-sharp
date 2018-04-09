@@ -8,7 +8,7 @@ namespace bl4ckb0t.Modules.Remind
 {
 	public class Remind : BaseModule
 	{
-		public static readonly string path = new Uri(Path.Combine(Utilities.DataPath(), "reminders")).LocalPath;
+		public static readonly string path = new NoPrefixUri(Path.Combine(Utilities.DataPath(), "reminders")).LocalPath;
 		private Dictionary<string, string> buffer = new Dictionary<string, string>();
 
 		public Remind(string _name) : base(_name) { }
@@ -18,7 +18,7 @@ namespace bl4ckb0t.Modules.Remind
 			RegisterChannelCommand(new Command());
 
 			if(!Directory.Exists(path))
-				Directory.CreateDirectory(new Uri(path).LocalPath);
+				Directory.CreateDirectory(new NoPrefixUri(path).LocalPath);
 
 			foreach(string f in Directory.EnumerateFiles(path))
 			{

@@ -7,7 +7,7 @@ namespace bl4ckb0t.Modules.CookieRewards
 {
 	public class CookieRewards: BaseModule
     {
-		public static string path = new Uri(Path.Combine(Utilities.DataPath(), "cookies.txt")).LocalPath;
+		public static string path = new NoPrefixUri(Path.Combine(Utilities.DataPath(), "cookies.txt")).LocalPath;
 
 		public CookieRewards(string _name) : base(_name) { }
 

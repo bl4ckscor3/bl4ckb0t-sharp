@@ -200,7 +200,7 @@ namespace bl4ckb0t
 		/// <param name="client">The client to which to register the modules to</param>
 		public static void InitPublicModules(Bot client)
 		{
-			string moduleFolder = new Uri(Path.Combine(Utilities.DataPath(), "modules")).LocalPath;
+			string moduleFolder = new NoPrefixUri(Path.Combine(Utilities.DataPath(), "modules")).LocalPath;
 
 			if(!Directory.Exists(moduleFolder))
 				Directory.CreateDirectory(moduleFolder);
