@@ -11,10 +11,12 @@ namespace bl4ckb0t
 	class Core
 	{
 		/// <summary>
-		/// Valid program arguments:
-		/// -name name - Sets the name of the bot to "name".
-		/// -prefix ! - Sets the command prefix to "!".
-		/// -wip - Marks this bot as being started as work in progress. This will force a hardcoded name for the bot.
+		/// Mandatory program arguments:
+		///		-name name		Sets the name of the bot to "name".
+		///		-prefix !		Sets the command prefix to "!".
+		/// 
+		/// Optional program arguments:
+		///		-wip			Marks this bot as being started as work in progress. This will force a hardcoded name for the bot.
 		/// </summary>
 		/// <param name="args"></param>
 		static void Main(string[] args)
