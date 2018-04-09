@@ -15,6 +15,28 @@ namespace bl4ckb0t.Util
 		#region DataUtils
 		
 		/// <summary>
+		/// Searches a given argument in a program argument array and returns its value.
+		/// This method will return null if the argument has not been found, or the value would be outside the range of the array.
+		/// Do not use this if you want to check if a specific argument exists. Use args.contains(arg) for that
+		/// </summary>
+		/// <param name="args">The program argument array</param>
+		/// <param name="arg">The argument to look for</param>
+		public static string GetArg(string[] args, string arg)
+		{
+			for(int i = 0; i < args.Length; i++)
+			{
+				if(args[i].Equals(arg))
+				{
+					if(i + 1 >= args.Length)
+						return null;
+					return args[i + 1];
+				}
+			}
+
+			return null;
+		}
+
+		/// <summary>
 		/// Adds information about the bot to the global database
 		/// </summary>
 		/// <param name="key">The key of the information by which it can be found. Will be saved in lower case</param>

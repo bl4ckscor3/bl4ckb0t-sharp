@@ -10,11 +10,18 @@ namespace bl4ckb0t
 {
 	class Core
 	{
+		/// <summary>
+		/// Valid program arguments:
+		/// -name name - Sets the name of the bot to "name".
+		/// -prefix ! - Sets the command prefix to "!".
+		/// -wip - Marks this bot as being started as work in progress. This will force a hardcoded name for the bot.
+		/// </summary>
+		/// <param name="args"></param>
 		static void Main(string[] args)
 		{
-			Utilities.AddInformation("name", "bl4ckb0t");
+			Utilities.AddInformation("name", Utilities.GetArg(args, "-name"));
 			Utilities.AddInformation("version", "v7.0");
-			Utilities.AddInformation("prefix", "-");
+			Utilities.AddInformation("prefix", Utilities.GetArg(args, "-prefix"));
 			Utilities.AddInformation("defaultChannels", new List<string>());
 			Utilities.AddInformation("lvl2Users", new List<string>());
 			Utilities.AddInformation("lvl3Users", new List<string>());
@@ -24,6 +31,7 @@ namespace bl4ckb0t
 			try
 			{
 				bool wip = args.Contains("-wip");
+
 				Utilities.AddInformation("wip", wip);
 
 				if(wip)
